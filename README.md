@@ -4,13 +4,22 @@ This tool displays spelling errors present in all the tex files of a directory. 
 
 ## Installation
 
-- Install aspell, sed aspell-XX (language: aspell-fr, aspell-en, ...)
-- Install with apt `sudo apt install aspell aspell-fr sed`
+Install aspell, sed aspell-<language_id> <br>
+Link to the list of languages that Aspell recognizes: https://ftp.gnu.org/gnu/aspell/dict/0index.html.
+
+For Debian / Ubuntu:
+- Install with apt `sudo apt install aspell sed`
+- Install the package of your document language with `sudo apt install aspell-<language_id>`. 
+- Assign an execute permission to the script `chmod +x spell_checker.sh`
+
+For Arch Linux / Manjaro:
+- Install with apt `sudo pacman -s aspell sed`
+- Install the package of your document language with `sudo pacman -s aspell-<language_id>`. 
 - Assign an execute permission to the script `chmod +x spell_checker.sh`
 
 ## Configuration
 
-Specify the document language with the "document_language" variable (example: en for English). List of languages that Aspell recognizes: https://ftp.gnu.org/gnu/aspell/dict/0index.html.
+Specify the document language with the "document_language" variable (example: en for English). 
 
 Specify the path of the directory to be analyzed in the "working_directory" variable.
 
