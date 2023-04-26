@@ -71,7 +71,7 @@ do
 
         #words=$(<temp.txt aspell list --sug-mode=ultra --dont-skip-invalid-words --dont-clean-words --ignore-case --dont-tex-check-comments -p $custom_personal -t -d fr --encoding=utf-8)
         #rm temp.txt
-        words=$(<$tex_file aspell list --sug-mode=ultra --dont-skip-invalid-words --dont-clean-words --ignore-case --dont-tex-check-comments -p $custom_personal -t -d fr --encoding=utf-8)
+        words=$(<$tex_file aspell list --sug-mode=ultra --dont-skip-invalid-words --dont-clean-words --ignore-case --dont-tex-check-comments -p $custom_personal -t -d $document_language --encoding=utf-8)
         for word in $words
         do
             word_line=$(grep -on "\<$word\>" $tex_file | head -n 1)

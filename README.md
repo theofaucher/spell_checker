@@ -10,6 +10,8 @@ This tool displays spelling errors present in all the tex files of a directory. 
 
 ## Configuration
 
+Specify the document language with the "document_language" variable (example: en for English). List of languages that Aspell recognizes: https://ftp.gnu.org/gnu/aspell/dict/0index.html.
+
 Specify the path of the directory to be analyzed in the "working_directory" variable.
 
 If you want a customised dictionary:
@@ -32,6 +34,7 @@ If the "stop_on_error" variable is true, the tool will stop on the first detecte
 
 spell_checker.conf: 
 ```
+document_language=fr
 working_directory=/home/<user>/<directory to be checked>/
 
 dictionaries+=("<script directory path>/dictionaries/dictionary_example.txt")
